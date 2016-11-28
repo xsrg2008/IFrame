@@ -18,7 +18,7 @@ namespace IFrame.Droid
             base.OnCreate(bundle);
             ActionBar.SetIcon(Android.Resource.Color.Transparent);
             
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+            Forms.Init(this, bundle);
             DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
             ToastNotificatorImplementation.Init(this);
             LoadApplication(new App());

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.Messages.CreateMulChat">
+  <StackLayout Spacing="0">
+    <StackLayout Orientation="Horizontal" Spacing="0">
+      <Button BackgroundColor="#ffdda0"
+              HeightRequest="55"
+              WidthRequest="65"
+              BorderRadius="0"
+              HorizontalOptions="Start"
+              Image="@drawable/fanhui"
+              Clicked="OnFhCicked" />
+      <Label BackgroundColor="#ffdda0"
+             Text="选择好友"
+             FontSize="25"
+             FontAttributes="None"
+             HeightRequest="55"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center" />
+      <Button BackgroundColor="#ffdda0"
+              HeightRequest="55"
+              WidthRequest="65"
+              BorderRadius="0"
+              HorizontalOptions="End"
+              Text="确定"
+              FontSize="20"
+              TextColor="White"
+              Clicked="OnCreate" />
+    </StackLayout>
+    <ListView x:Name="NameList" 
+              ItemsSource="{Binding FriendList}"
+              ItemTapped="OnNameTapped"
+              HasUnevenRows="True"
+              BackgroundColor="White"
+              SeparatorColor="#ddd">
+    </ListView>
+  </StackLayout>
+</ContentPage>
