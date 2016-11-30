@@ -41,6 +41,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ICarouselViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Messages\BaseMessageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Messages\CreateMulChatViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Messages\MessagePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Messages\MessageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Messages\TalkPageViewModel.cs" />
@@ -64,6 +65,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\InviteCell.xaml.cs">
       <DependentUpon>InviteCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\NameListCell.xaml.cs">
+      <DependentUpon>NameListCell.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\OutcomingCell.xaml.cs">
@@ -174,6 +179,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Friends\FriendDetailPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Friends\FriendPage.xaml.cs">
       <DependentUpon>FriendPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Messages\CreateMulChat.xaml.cs">
+      <DependentUpon>CreateMulChat.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Messages\MessagePage.cs" />
@@ -377,6 +386,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Friends\AddNoResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Messages\CreateMulChat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Cells\NameListCell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

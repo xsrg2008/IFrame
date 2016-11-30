@@ -6,7 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using IFrame.ViewModels.Messages;
+using IFrame.Views.Messages;
 using Xamarin.Forms;
 
 namespace IFrame.Views.Friends
@@ -37,7 +38,7 @@ namespace IFrame.Views.Friends
             }
             else if (item.Name == "创建群聊")
             {
-                Navigation.PushAsync(new AddFriendPage() { BindingContext = new AddFriendViewModel() });
+                Navigation.PushAsync(new CreateMulChat() { BindingContext = new CreateMulChatViewModel() });
             }
             FriendList.SelectedItem = null;
         }

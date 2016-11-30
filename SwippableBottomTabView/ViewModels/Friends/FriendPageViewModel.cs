@@ -13,14 +13,7 @@ namespace IFrame.ViewModels.Friends
         {
             get { return new FriendPage(); }
         }
-        public string FriendTitle
-        {
-            get
-            {
-                return "医友";
-            }
-        }
-
+        
         public FriendPageViewModel()
         {
             FriendInformations = new ObservableCollection<FriendInfo>();
