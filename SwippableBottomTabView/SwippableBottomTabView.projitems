@@ -20,6 +20,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\HospitalInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PlaceInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ProfessionInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SchoolInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SexInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageTabs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Circles\CirclePageViewModel.cs" />
@@ -46,6 +48,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Messages\MessageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Messages\TalkPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabbedPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyCityViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyHospitalViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyJobViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyProfessionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyProvinceViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MySchoolViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MySexViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\UserPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\ChangeDataCell.xaml.cs">
       <DependentUpon>ChangeDataCell.xaml</DependentUpon>
@@ -120,6 +129,22 @@
       <DependentUpon>UpdateApp.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyInterest.xaml.cs">
+      <DependentUpon>MyInterest.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyName.xaml.cs">
+      <DependentUpon>MyName.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MySexold.xaml.cs">
+      <DependentUpon>MySexold.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyTelphone.xaml.cs">
+      <DependentUpon>MyTelphone.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocCity.xaml.cs">
       <DependentUpon>FindDocCity.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -189,6 +214,46 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Messages\TalkPage.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>TalkPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfo.xaml.cs">
+      <DependentUpon>DetailInfo.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyCity.xaml.cs">
+      <DependentUpon>MyCity.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyCitySchool.xaml.cs">
+      <DependentUpon>MyCitySchool.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyHospital.xaml.cs">
+      <DependentUpon>MyHospital.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyJob.xaml.cs">
+      <DependentUpon>MyJob.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyProfession.xaml.cs">
+      <DependentUpon>MyProfession.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyProvince.xaml.cs">
+      <DependentUpon>MyProvince.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyProvinceSchool.xaml.cs">
+      <DependentUpon>MyProvinceSchool.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\MySchool.xaml.cs">
+      <DependentUpon>MySchool.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\MySex.xaml.cs">
+      <DependentUpon>MySex.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\UserPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\SetPage.xaml.cs">
@@ -398,6 +463,90 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Cells\NameListCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyInterest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MySexold.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyTelphone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyCity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyCitySchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyHospital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyJob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyProfession.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyProvince.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\MyProvinceSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\MySchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\MySex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
