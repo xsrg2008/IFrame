@@ -57,18 +57,18 @@ namespace IFrame
                         HorizontalOptions = LayoutOptions.CenterAndExpand
                     });
                 }
+//                else if (index == 2)
+//                {
+//                    tab.Children.Add(new Image { Source = "circle.png", HeightRequest = 25 });
+//                    tab.Children.Add(new Label
+//                    {
+//                        TextColor = Color.Gray,
+//                        Text = "医友圈",
+//                        FontSize = 11,
+//                        HorizontalOptions = LayoutOptions.CenterAndExpand
+//                    });
+//                }
                 else if (index == 2)
-                {
-                    tab.Children.Add(new Image { Source = "circle.png", HeightRequest = 25 });
-                    tab.Children.Add(new Label
-                    {
-                        TextColor = Color.Gray,
-                        Text = "医友圈",
-                        FontSize = 11,
-                        HorizontalOptions = LayoutOptions.CenterAndExpand
-                    });
-                }
-                else if (index == 3)
                 {
                     tab.Children.Add(new Image { Source = "talk.png", HeightRequest = 25 });
                     tab.Children.Add(new Label

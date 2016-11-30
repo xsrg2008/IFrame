@@ -85,7 +85,8 @@ namespace IFrame.Views.UserCenter
             var changeDataCell = new ChangeDataCell();
             changeDataCell.Tapped += (sender, e) =>
             {
-                Navigation.PushAsync(new AddFriendPage());
+                //Navigation.PushAsync(new AddFriendPage());
+                Navigation.PushAsync(new DetailInfo());
             };
             var inviteCell = new InviteCell();
             inviteCell.Tapped += (sender, e) =>

@@ -16,7 +16,7 @@ namespace IFrame.ViewModels
             {
                 new FriendPageViewModel(),
                 new FindPageViewModel(),
-                new CirclePageViewModel(),
+//                new CirclePageViewModel(),
                 new TalkPageViewModel(),
                 new UserPageViewModel()
             };
